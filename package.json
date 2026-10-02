@@ -1,0 +1,19 @@
+{
+  "name": "spellcheck-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地英文词典拼写检查与纠错候选后端（API + CLI）",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "node dist/src/demo.js",
+    "gen-data": "node dist/scripts/generate-wordlist.js",
+    "test": "npm run build && node --test dist/test/spellcheck.test.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
